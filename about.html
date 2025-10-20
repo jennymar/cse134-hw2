@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>About Me — Jenny Mar</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <style>
+            travel-card {
+                display: block;
+                width: 240px;
+                height: 300px;
+                border: 2px solid #aaa;
+                border-radius: 20px;
+                padding: 15px;
+                margin: 10px;
+                text-align: center;
+                background: #f0f8ff;
+            }
+
+            travel-card img {
+                width: 100%;
+                height: 60%;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+
+            travel-card[region="city"] {
+                background: #e8f5e9;
+            }
+
+            travel-card[region="beach"] {
+                background: #fff8e1;
+            }
+
+            travel-card h3 {
+                margin: 6px 0;
+            }
+
+            travel-card p {
+                font-size: 0.9em;
+            }
+        </style>
+
+        <script>
+            class HelloConsole extends HTMLElement {
+                constructor() {
+                    super();
+                    console.log("Hello world!");
+                }
+            }
+            customElements.define('hello-console', HelloConsole);
+        </script>
+
+    </head>
+
+    <body>
+        <header>
+            <nav aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="experiences.html">Experience</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="experiments.html">Experiments</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+
+            <h1>About Me</h1>
+
+            <section class="fun-facts">
+                <picture>
+                    <source srcset="headshot.jpg" media="(max-width: 600px)">
+                    <img src="headshot2.jpg" alt="Jenny headshot">
+                </picture>
+
+                <p>Hi! I'm <span class="highlight">Jenny</span> — a <em>curious</em> and <em>creative</em> student who loves learning new things, building projects, and connecting with people. Here are a few fun facts about me!</p>
+                <svg width="34" height="35" viewBox="0 0 34 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="6.5" cy="28.5" r="6.5" fill="black"/>
+                <circle cx="27.5" cy="28.5" r="6.5" fill="black"/>
+                <line x1="12.5" y1="29" x2="12.5" stroke="black"/>
+                <line x1="34" y1="0.5" x2="13" y2="0.5" stroke="black"/>
+                <line x1="34" y1="4.5" x2="13" y2="4.5" stroke="black"/>
+                <line x1="33.5" y1="29" x2="33.5" stroke="black"/>
+                </svg>
+                
+                <div>
+                    <h3>Favorite concerts I've been to!</h3>
+                    <p><span>Portion of artists I've seen toward my goal:</span> 
+                    <progress value="60" max="100">60%</progress>
+                    <ol>
+                        <li>Coldplay</li>
+                        <li>Taylor Swift</li>
+                        <li>Shawn Mendes</li>
+                        <li>Conan Gray</li>
+                    </ol>
+                </div>
+
+                <h3>Favorite Travel Spots</h3>
+                <travel-card region="city">
+                    <h3>Italy</h3>
+                    <img src="italy.jpg" alt="Italy">
+                    <p>Yummy food and beautiful art.</p>
+                </travel-card>
+
+                <travel-card region="beach">
+                    <h3>Hawaii</h3>
+                    <img src="hawaii.jpg" alt="Hawaii">
+                    <p>Sunny skies and golden sand.</p>
+                </travel-card>
+
+                <hello-console></hello-console>
+
+                <div>
+                    <button>Click for a Fun Fact!</button>
+                    <dialog>
+                        <p>I do not like cheese!</p>
+                        <button>Close</button>
+                    </dialog>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 Jenny M</p>
+            <noscript><p>Some interactive features require JavaScript. Please enable JS.</p></noscript>
+        </footer>        
+    </body>
+</html>

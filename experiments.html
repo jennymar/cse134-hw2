@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Experiments</title>
+    </head>
+
+    <body>
+        <header>
+            <nav aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="experiences.html">Experience</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="experiments.html">Experiments</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Experiments</h1>
+
+            <h2>Template</h2>
+            <template>
+                <p>Content that came from template.</p>
+            </template>
+            <button onclick="">Show Template Content</button>
+
+            <h2>Picture / Source</h2>
+            <picture>
+                <source media="(max-width: 550px)" srcset="smalldog.png" type="image/png">
+                <source media="(max-width: 2000px)" srcset="bigdog.jpeg" type="image/jpeg">
+                <img src="bigdog.jpeg" alt="Placeholder image">
+            </picture>
+
+            <h2>Audio / Source</h2>
+            <audio controls>
+                <source src="short-logo.mp3" type="audio/mpeg">
+                Your browser does not support the audio.
+            </audio>
+
+            <h2>Video / Source</h2>
+            <video controls>
+                <source src="cows.mp4" type="video/mp4">
+                Your browser does not support the video.
+            </video>
+
+            <h2>Canvas</h2>
+            <canvas id="canvas"></canvas>
+            <script>
+                const doc = document.getElementById("canvas").getContext("2d");
+                doc.fillStyle = "red";
+                doc.fillRect(0, 0, 500, 300);
+                doc.beginPath();
+                doc.arc(200, 50, 80, 0, 1.2 * Math.PI);
+                doc.fillStyle = "blue";
+                doc.fill();
+                doc.stroke();
+            </script>
+            
+        </main>
+    </body>
+</html>

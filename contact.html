@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <title>Contact Me</title>
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+        </head>
+
+        <body>
+            <header>
+                <nav aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="experiences.html">Experience</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="experiments.html">Experiments</a></li>
+                </ul>
+                </nav>
+            </header>
+
+            <main>
+                <h1>Contact Me</h1>
+
+                <form method="post" enctype="text/plain" aria-label="Contact form">
+                <fieldset>
+                    <legend>Reach out to me!</legend>
+
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" required>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6"></textarea>
+
+                    <button type="submit">Send Message</button>
+                </fieldset>
+                </form>
+
+                <progress max="100" value="30" id="prog" aria-hidden="true"></progress>
+            </main>
+
+            <footer>
+                <p>© 2025 Jenny M</p>
+                <noscript><p>Some interactive features require JavaScript. Please enable JS.</p></noscript>
+            </footer>
+        </body>
+
+</html>
