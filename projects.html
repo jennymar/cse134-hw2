@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Projects</title>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
@@ -21,42 +22,63 @@
 
         <main>
             <h1>Projects</h1>
+            <h2>Leadership & Personal Projects</h2>
 
             <section>
-                <h2>Leadership & Personal Projects</h2>
-                <article>
-                    <h3>Triton Software Engineering</h3>
-                    <p><i>Engineering Manager: Oct 2022 - Present</i></p>
-                    <ul>
-                        <li>Leading full-stack iOS mobile app team of 12 for nonprofit organization 4FLOT using Agile development cycle.</li>
-                        <li>Implementing dynamic SwiftUI views, state management, and service layers using MVVM architecture.</li>
-                        <li>Designing backend GET, POST, PATCH, DELETE routes with NodeJS Server and MongoDB database.</li>
-                    </ul>
+                <article class="experience-item">
+                    <picture>
+                        <source srcset="assets/tse-small.jpeg" media="(max-width: 700px)">
+                        <source srcset="assets/tse.jpeg" media="(min-width: 701px)">
+                        <img src="assets/tse.jpeg" alt="tse engineering managers photo" loading="lazy">
+                    </picture>
+                    <div class="experience-content">
+                        <h3>Triton Software Engineering</h3>
+                        <p><i>Engineering Manager: Oct 2022 - Present</i></p>
+                        <ul>
+                            <li>Leading full-stack iOS mobile app team of 12 for nonprofit organization 4FLOT using Agile development cycle.</li>
+                            <li>Implementing dynamic SwiftUI views, state management, and service layers using MVVM architecture.</li>
+                            <li>Designing backend GET, POST, PATCH, DELETE routes with NodeJS Server and MongoDB database.</li>
+                        </ul>
+                    </div>
                 </article>
 
-                <article>
-                    <h3>Association for Computing Machinery</h3>
-                    <p><i>Backend Developer: Oct 2022 - Present</i></p>
-                    <ul>
-                        <li>Designed backend schemas for DiamondHacks portal with 3-layer abstracted API routes and PostgreSQL database.</li>
-                        <li>Launched Discord Kartana bot to automate the event hosting pipeline and sync with ACM’s Notion calendar.</li>
-                    </ul>
+                <article class="experience-item">
+                    <picture>
+                        <source srcset="assets/acm-small.JPG" media="(max-width: 700px)">
+                        <source srcset="assets/acm.JPG" media="(min-width: 701px)">
+                        <img src="assets/acm.JPG" alt="acm group photo" loading="lazy">
+                    </picture>
+                    <div class="experience-content">
+                        <h3>Association for Computing Machinery</h3>
+                        <p><i>Backend Developer: Oct 2022 - Present</i></p>
+                        <ul>
+                            <li>Designed backend schemas for DiamondHacks portal with 3-layer abstracted API routes and PostgreSQL database.</li>
+                            <li>Launched Discord Kartana bot to automate the event hosting pipeline and sync with ACM’s Notion calendar.</li>
+                        </ul>
+                    </div>
                 </article>
 
-                <article>
-                    <h3>Hacktivists AI</h3>
-                    <p><i>ML Developer: Oct 2022 - Jan 2023</i></p>
-                    <ul>
-                        <li>Predicted court case outcomes using KNN, Decision Trees, Random Forest, LightGBM, SVM, and Keras deep learning models.</li>
-                        <li>Presented final 0.95 accuracy in annual showcase symposium for 50+ student organization executives and professors.</li>
-                    </ul>
+                <article class="experience-item">
+                    <picture>
+                        <source srcset="assets/hacktivists-small.png" media="(max-width: 700px)">
+                        <source srcset="assets/hacktivists.png" media="(min-width: 701px)">
+                        <img src="assets/hacktivists.png" alt="hacktivists screenshot" loading="lazy">
+                    </picture>
+                    <div class="experience-content">
+                        <h3>Hacktivists AI</h3>
+                        <p><i>ML Developer: Oct 2022 - Jan 2023</i></p>
+                        <ul>
+                            <li>Predicted court case outcomes using KNN, Decision Trees, Random Forest, LightGBM, SVM, and Keras deep learning models.</li>
+                            <li>Presented final 0.95 accuracy in annual showcase symposium for 50+ student organization executives and professors.</li>
+                        </ul>
+                    </div>
                 </article>
             </section>
 
             <section>
                 <h2>Technical Skills</h2>
                 <ul>
-                    <li><b>Languages:</b> Java, Python, SwiftUI, C, C#, C++, ARM64, Bash, JavaScript, TypeScript, HTML/CSS, R</li>
+                    <li><b>Languages:</b> Java, Python, SwiftUI, C, C#, C++, ARM64, Bash, JavaScript, TypeScript, HTML/CSS, R, Haskell</li>
                     <li><b>Developer Tools:</b> Git, JUnit, DeepNote, Google Colab, Jupyter Notebooks, XCode, IntelliJ, Docker, Visual Studio Code, PyCharm, ROS, MongoDB Atlas, Postman, Firebase, AWS, MySQL, PostgreSQL, Jarvislabs.ai</li>
                     <li><b>Libraries & Frameworks:</b> NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, PyTorch, Keras, TensorFlow, React, NextJS, NodeJS, Flask</li>
                 </ul>
@@ -64,7 +86,7 @@
         </main>
 
         <footer>
-            <p>© 2025 Jenny M</p>
+            <p>made with &hearts; by jenny mar</p>
             <noscript><p>Some interactive features require JavaScript. Please enable JS.</p></noscript>
         </footer>
     </body>

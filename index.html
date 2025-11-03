@@ -3,8 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>Personal Portfolio — Jenny Mar</title>
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body id="home">
         <header>
             <nav aria-label="Primary">
             <ul>
@@ -19,24 +20,28 @@
         </header>
 
         <main>
-            <h2>no extra credit attempts made</h2>
-            <picture>
-                <source srcset="headshot.jpg" media="(max-width: 600px)">
-                <img src="headshot2.jpg" alt="Jenny headshot">
-            </picture>
-            <h1>Hi! I'm Jenny!</h1>
-            <p>I'm a fourth year BS/MS computer science student @ UC San Diego graduating in June 2027. 
-                I previously interned at ServiceNow for 2 summers working on distributed systems and data streaming. My interests are 
-                in backend and full stack engineering, and I'm looking for 2026 summer intership opportunities!  
-                <br><br>
-                Visit the Experience and Projects pages to view my technical experience. Reach out to me on the Contact Me page! 
-                Learn more about my hobbies and interests on the About Me page.
-            </p>
-            <iframe src="resume.pdf"></iframe>
+            <section class="intro">
+                <picture>
+                    <source srcset="assets/jennyheadshot-small.jpg" media="(max-width: 700px)">
+                    <source srcset="assets/jennyheadshot.jpg" media="(min-width: 701px)">
+                    <img src="assets/jennyheadshot.jpg" alt="jenny headshot" loading="lazy">
+                </picture>
+                <div class="intro-text">
+                    <h1>hi, i'm jenny mar!</h1>
+                    <p>I'm a fourth year BS/MS computer science student @ UC San Diego graduating in June 2027. 
+                        I previously interned at ServiceNow for 2 summers working on distributed systems and data streaming. My interests are 
+                        in backend and full stack engineering, and I'm looking for 2026 summer intership opportunities!  
+                        <br><br>
+                        Visit the Experience and Projects pages to view my technical experience. Reach out to me on the Contact Me page! 
+                        Learn more about my hobbies and interests on the About Me page.
+                    </p>
+                </div>
+            </section>
+            <iframe src="assets/resume.pdf"></iframe>
         </main>
 
         <footer>
-            <p>© 2025 Jenny M</p>
+            <p>made with &hearts; by jenny mar</p>
             <noscript><p>Some interactive features require JavaScript. Please enable JS.</p></noscript>
         </footer>
     </body>

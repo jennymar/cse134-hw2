@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Domine:wght@400..700&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --primary-color: color(display-p3 0.2 0.4 0.8); 
+  --accent-color: color-mix(in srgb, var(--primary-color), white 20%);
+  --font-heading: 'Domine', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+  --font-size-adjust-body: 0.55;
+  --font-size-adjust-heading: 0.45;
+  --font-size-base: 1rem;
+  --nav-height: 18dvh;
+}
+
+body {
+  font-family: var(--font-body, Arial, sans-serif);
+  font-size: var(--font-size-base, 16px);
+  /* 
+  BASELINE FEATURE: "CSS font-size-adjust is now in Baseline" 
+  https://web.dev/blog/font-size-adjust?hl=en
+  If one of the custom fonts I'm using doesn't render correctly, the fallback font needs to match the 
+  style and size of the custom font. Therefore, we are using the new feature font-size-adjust to alter 
+  the height of the fallback font in order to look more like the custom one. In this case, we are adjusting the
+  height of Arial by multiplying by the ratio of the height of a lowercase x.
+  */
+  font-size-adjust: var(--font-size-adjust-body, 0.55);
+  color: #222;
+  background-color: color-mix(in srgb, white 80%, var(--primary-color) 20%);
+  margin: 0;
+  line-height: 1.6;
+}
+
+
+header {
+  background: var(--primary-color);
+  font-family: var(--font-body, Arial, sans-serif);
+  font-size-adjust: var(--font-size-adjust-body, 0.45);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nav-height);
+  padding: 0 3rem;
+}
+
+
+nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 2.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+  font-size: 0.9rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+
+main {
+  display: grid;
+  grid-template-columns: 1fr min(80%, 1200px) 1fr;
+  justify-items: center;
+  padding: 4dvh 2rem;
+}
+
+main > * {
+  grid-column: 2;
+}
+
+h1, h2  {
+  color: var(--primary-color);
+  font-family: var(--font-heading, Arial, sans-serif);
+  font-size-adjust: var(--font-size-adjust-heading, 0.55);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  transition: transform 0.4s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.03);
+}
+
+iframe {
+  width: 80%;
+  height: 60dvh;
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+}
+
+
+button {
+  background: var(--primary-color);
+  font-family: var(--font-body, Arial, sans-serif);
+  color: white;
+  padding: 0.7em 1.2em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: var(--accent-color);
+  transform: scale(1.05);
+}
+
+
+footer {
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main h1, main p, main img {
+  animation: fadeInUp 0.8s ease-in-out both;
+} 
+
+
+.highlight {
+  color: oklch(65% 0.25 260);
+}
+
+
+/* HOME PAGE */
+#home main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4dvh 2rem;
+  gap: 3rem;
+}
+
+#home .intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+#home .intro picture img {
+  width: 350px;
+  height: auto;
+  border-radius: 1srem;
+}
+
+#home .intro-text {
+  flex: 1;
+}
+
+
+#home .intro-text h1 {
+  font-size: 4rem;
+  font-family: var(--font-heading, Arial, sans-serif);
+  font-size-adjust: var(--font-size-adjust-heading, 0.55);
+}
+
+#home iframe {
+  width: 90%;
+  max-width: 900px;
+  height: 70dvh;
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  #home .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #home .intro picture img {
+    width: 60%;
+  }
+}
+
+
+.experience-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  width:100%;
+}
+
+.experience-item picture,
+.experience-item img {
+  height: 280px;
+  width: 320px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.experience-content {
+  flex: 1;
+  position: relative;
+  padding-left: 1rem;
+  border-left: 4px solid var(--accent-color);
+}
+
+.travel-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.concert-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; 
+}
+
+travel-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  height: 300px;
+  border: 2px solid var(--accent-color);
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  background: color-mix(in srgb, white 95%, var(--primary-color) 5%);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+travel-card:hover {
+  transform: translateY(-5px);
+}
+
+travel-card img {
+  width: 100%;
+  height: 60%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+travel-card[region="city"] {
+  background: color-mix(in srgb, white 93%, var(--primary-color) 7%);
+}
+
+travel-card[region="beach"] {
+  background: color-mix(in srgb, white 95%, var(--accent-color) 5%);
+}
+
+travel-card h3 {
+  margin: 0.5rem 0 0.3rem;
+  color: var(--primary-color);
+  font-family: var(--font-heading, Arial, sans-serif);
+}
+
+travel-card p {
+  font-size: 0.9em;
+  color: #444;
+}
+
+
+#contact form {
+  width: 100%;
+  max-width: 600px;
+  background: color-mix(in srgb, white 90%, var(--primary-color) 10%);
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+#contact fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#contact legend {
+  font-family: var(--font-heading, Arial, sans-serif);
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+#contact input,
+#contact textarea {
+  width: 95%;
+  padding: 0.6em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: var(--font-body, Arial, sans-serif);
+  font-size: 1rem;
+  resize: vertical;
+}
+
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;   
+    width: auto;          
+    margin: 0 auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  header {
+    flex-direction: column;  
+    align-items: center;     
+    height: auto; 
+    padding: 1rem; 
+  }
+
+  main {
+      grid-template-columns: 1fr;
+      padding: 2rem 1rem;
+  }
+
+  .experience-item {
+      flex-direction: column;
+  }
+
+  .experience-content {
+      padding-left: 0;
+      border-left: none;
+      border-top: 4px solid var(--accent-color);
+      padding-top: 0.5rem;
+  }
+
+  .experience-item picture,
+  .experience-item img {
+      width: 100%;
+      height: auto;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  main {
+    grid-template-columns: 1fr min(90%, 900px) 1fr;
+  }
+
+  .experience-item {
+    flex-direction: row;
+  }
+
+  .experience-item picture,
+  .experience-item img {
+    width: 250px;
+    height: 200px;
+  }
+}
+
+
+@media (min-width: 1025px) {
+  main {
+    grid-template-columns: 1fr min(80%, 1200px) 1fr;
+  }
+
+  .experience-item picture,
+  .experience-item img {
+    width: 320px;
+    height: 280px;
+  }
+}
+

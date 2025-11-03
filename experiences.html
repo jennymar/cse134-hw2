@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Experiences Page</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header>
@@ -20,10 +21,15 @@
 
         <main>
             <h1>Work Experience</h1>
-
+            <h2>Industry</h2>
             <section>
-                <h2>Industry</h2>
-                    <article>
+                <article class="experience-item">
+                    <picture>
+                        <source srcset="assets/servicenow-small.JPG" media="(max-width: 700px)">
+                        <source srcset="assets/servicenow.JPG" media="(min-width: 701px)">
+                        <img src="assets/servicenow.JPG" alt="servicenow interns group photo" loading="lazy">
+                    </picture>
+                    <div class="experience-content">
                         <h3>ServiceNow</h3>
                         <p><i>Software Engineer Intern: Jun 2024 - Present</i></p>
                         <ul>
@@ -31,30 +37,46 @@
                             <li>Developing multi-threading processes in producer and consumer instances using <strong>Hermes Kafka</strong> message queues.</li>
                             <li>Optimizing seeding performance by adding features for <strong>unlimited records</strong> and multi-seeding functionality.</li>
                         </ul>
-                    </article>
+                    </div>
+                </article>
             </section>
 
+
+            <h2>Academia</h2>
             <section>
-                <h2>Academia</h2>
-                <article>
-                    <h3>UCSD Computer Science and Engineering Department</h3>
-                    <p><i>CSE Instructional Assistant: Sep 2023 - Present</i></p>
-                    <ul>
-                        <li>Conducting 90 tutor hours per quarter for 300+ upper division class <strong>CSE 100: Advanced Data Structures</strong></li>
-                        <li>Led <strong>40+ student lab sections</strong> weekly and assisted in 30 lectures for <strong>CSE 15L: Software Tools and Techniques</strong></li>
-                        <li>Facilitating learning in trees, graphs, stacks, queues, compression, hashing, Bash scripts, and runtime analysis</li>
-                    </ul>
+                <article class="experience-item">
+                    <picture>
+                        <source srcset="assets/cse-small.png" media="(max-width: 700px)">
+                        <source srcset="assets/cse.png" media="(min-width: 701px)">
+                        <img src="assets/cse.png" alt="ucsd cse logo" loading="lazy">
+                    </picture>
+                    <div class="experience-content">
+                        <h3>UCSD Computer Science and Engineering Department</h3>
+                        <p><i>CSE Instructional Assistant: Sep 2023 - Present</i></p>
+                        <ul>
+                            <li>Conducting 90 tutor hours per quarter for 300+ upper division class <strong>CSE 100: Advanced Data Structures</strong></li>
+                            <li>Led <strong>40+ student lab sections</strong> weekly and assisted in 30 lectures for <strong>CSE 15L: Software Tools and Techniques</strong></li>
+                            <li>Facilitating learning in trees, graphs, stacks, queues, compression, hashing, Bash scripts, and runtime analysis</li>
+                        </ul>
+                    </div>
                 </article>
 
-                <article>
-                    <h3>The Design Lab</h3>
-                    <p><i>Research Intern: May 2023 - Oct 2023</i></p>
-                    <ul>
-                        <li>Developed Figma whiteboard plugins embedded with structured design templates for 5 whys and competitive analysis</li>
-                        <li>Built full-stack system using <strong>React, TypeScript, Flask, Firebase, GPT-3.5 API</strong> to deliver in-template AI feedback</li>
-                        <li>Ran user studies with <strong>57 participants</strong> and 3 iterated versions for <strong>ACM IUI 2024 HCI research conference</strong></li>
-                    </ul>
-                    View the <a href="https://www.kaggle.com/competitions/sorghum-id-fgvc-9/overview" target="_blank">related publication</a>
+                <article class="experience-item">
+                    <picture>
+                        <source srcset="assets/designlab-small.png" media="(max-width: 700px)">
+                        <source srcset="assets/designlab.png" media="(min-width: 701px)">
+                        <img src="assets/designlab.png" alt="design lab photo" loading="lazy">
+                    </picture>
+                    <div class="experience-content">
+                        <h3>The Design Lab</h3>
+                        <p><i>Research Intern: May 2023 - Oct 2023</i></p>
+                        <ul>
+                            <li>Developed Figma whiteboard plugins embedded with structured design templates for 5 whys and competitive analysis</li>
+                            <li>Built full-stack system using <strong>React, TypeScript, Flask, Firebase, GPT-3.5 API</strong> to deliver in-template AI feedback</li>
+                            <li>Ran user studies with <strong>57 participants</strong> and 3 iterated versions for <strong>ACM IUI 2024 HCI research conference</strong></li>
+                        </ul>
+                        View the <a href="https://www.kaggle.com/competitions/sorghum-id-fgvc-9/overview" target="_blank">related publication</a>
+                    </div>
                 </article>
             </section>
         </main>
