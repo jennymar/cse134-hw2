@@ -231,6 +231,12 @@ main h1, main p, main img {
   width:100%;
 }
 
+.experience-item:has(img:hover) {
+  background: color-mix(in srgb, white 95%, var(--accent-color) 10%);
+  border-radius: 1rem;
+  transition: background 0.3s ease;
+}
+
 .experience-item picture,
 .experience-item img {
   height: 280px;
@@ -339,6 +345,8 @@ travel-card p {
   font-size: 1rem;
   resize: vertical;
 }
+
+
 
 
 @media (max-width: 600px) {
