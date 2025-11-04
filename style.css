@@ -366,6 +366,10 @@ travel-card p {
     padding: 1rem; 
   }
 
+  main > * {
+    grid-column: 1;
+  }
+
   main {
       grid-template-columns: 1fr;
       padding: 2rem 1rem;
